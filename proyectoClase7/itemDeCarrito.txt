@@ -1,0 +1,4 @@
+cantidad,precio,descripcion
+1,100.0,jabon de tocador
+2,100.0,yerba
+4,50.0,azucar

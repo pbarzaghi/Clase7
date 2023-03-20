@@ -1,0 +1,5 @@
+nombre,precio,codigo
+jabon de tocador,30.2,3333
+yerba,100.0,4444
+azucar,50.0,5555
+mermelada,60.0,6666

@@ -1,0 +1,3 @@
+nombre,apellido,nro,tipo
+pablo,barzaghi,2222,DNI
+guillermina,lateana,df111,PASAPORTE
