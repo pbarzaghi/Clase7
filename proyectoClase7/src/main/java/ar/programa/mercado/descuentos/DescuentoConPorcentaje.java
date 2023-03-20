@@ -21,9 +21,9 @@ public class DescuentoConPorcentaje extends DescuentoImpl {
    //         0,90 para despues multiplicar 100 * 0,90 = 90 
    // Descontando asi el 10%
     
-    public void setDescuento(Producto producto,double porcentaje){
+    public void setDescuento(Producto producto,Double porcentaje){
         
-        double descontar = (100- porcentaje) /100.0;
+        Double descontar = (100- porcentaje) /100.0;
        
         super.setDescuento(producto,descontar);                
                 

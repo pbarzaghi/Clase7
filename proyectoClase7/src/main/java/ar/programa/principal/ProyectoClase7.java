@@ -120,9 +120,9 @@ public class ProyectoClase7 {
          Descuento  tablaDesc= new DescuentoConPorcentajeTope();
          tablaDesc.setValorDesc(10.0);
                 
-        tablaDesc.setDescuento(producto1, 5);
-        tablaDesc.setDescuento(producto4, 30);
-        tablaDesc.setDescuento(producto6, 50);
+        tablaDesc.setDescuento(producto1,5.0);
+        tablaDesc.setDescuento(producto4, 30.0);
+        tablaDesc.setDescuento(producto6, 50.0);
      
     }
 

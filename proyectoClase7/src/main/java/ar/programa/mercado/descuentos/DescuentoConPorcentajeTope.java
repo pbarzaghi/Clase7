@@ -15,9 +15,9 @@ public class DescuentoConPorcentajeTope extends DescuentoImpl  {
    private double topePorcentaje;
    
 
-   @Override
   
-   public void setDescuento(Producto producto,double valorPorc){
+  
+   public void setDescuento(Producto producto,Double valorPorc){
     
        double valorTope=0.0;
         
@@ -30,7 +30,7 @@ public class DescuentoConPorcentajeTope extends DescuentoImpl  {
     super.setDescuento(producto, valorTope);
    }
    
-   public void setValorDesc(double valorDesc){
+   public void setValorDesc(Double valorDesc){
    
       this.topePorcentaje=valorDesc;
    }
