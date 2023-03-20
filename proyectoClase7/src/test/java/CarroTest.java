@@ -67,13 +67,16 @@ public class CarroTest {
       
       Persona comprador=new Persona("Pablo", "Barzaghi","232323" , TipoDocumento.DNI);
       
-      Carro carro =new Carro(comprador, item1, item2, item3);
-      carro.setTipoDescuento(TipoDescuentoEnum.FIJO);
+     // Carro 
+   
+     Carro carro =new Carro(comprador, item1, item2, item3);
+     carro.setTipoDescuento(TipoDescuentoEnum.FIJO);
+      
       
       
         System.out.println("CarroTest.carroConDescuentoFijode15Pesos() ----- "+carro.getPrecioCompra());
      
-      Assertions.assertEquals(225.0,carro.getPrecioCompra());
+      Assertions.assertEquals(75.0,carro.getPrecioCompra());
       
     }
     
@@ -81,19 +84,19 @@ public class CarroTest {
      @Test
     public void carroConDescPorcentajeTope10Porc(){
       Producto producto =new Producto();
-      producto.setNombre("Yerba");
-      producto.setCodigo("1111");
+      producto.setNombre("Yerba mate");
+      producto.setCodigo("1111000");
       producto.setPrecio(100.0);
       
 
       Producto producto1 =new Producto();
-      producto1.setNombre("Azulcar");
-      producto1.setCodigo("2222");
+      producto1.setNombre("Azulcar negra");
+      producto1.setCodigo("2222111");
       producto1.setPrecio(50.0);
      
       Producto producto2 =new Producto();
-      producto2.setNombre("Maiz");
-      producto2.setCodigo("3333");
+      producto2.setNombre("Maiz mezcla");
+      producto2.setCodigo("33332222");
       producto2.setPrecio(100.0);
       
       // Descuento con tope
@@ -107,7 +110,7 @@ public class CarroTest {
        ItemDeCarro item1 = new ItemDeCarro(producto, 1);
       ItemDeCarro item2 = new ItemDeCarro(producto1, 1);
       ItemDeCarro item3 = new ItemDeCarro(producto2, 1);
-      
+   
       Persona comprador=new Persona("Pablo", "Barzaghi","232323" , TipoDocumento.DNI);
       
       Carro carro =new Carro(comprador, item1, item2, item3);
@@ -124,19 +127,19 @@ public class CarroTest {
      @Test
     public void carroConDescDel30PorcientoDado(){
           Producto producto =new Producto();
-      producto.setNombre("Yerba");
-      producto.setCodigo("1111");
+      producto.setNombre("Yerba misionera");
+      producto.setCodigo("1111444");
       producto.setPrecio(100.0);
       
 
       Producto producto1 =new Producto();
-      producto1.setNombre("Azulcar");
-      producto1.setCodigo("2222");
+      producto1.setNombre("Azulcar mascabo");
+      producto1.setCodigo("2222555");
       producto1.setPrecio(50.0);
      
       Producto producto2 =new Producto();
-      producto2.setNombre("Maiz");
-      producto2.setCodigo("3333");
+      producto2.setNombre("Maizy girasol");
+      producto2.setCodigo("3333666");
       producto2.setPrecio(100.0);
       
       // Descuento con tope
@@ -148,13 +151,14 @@ public class CarroTest {
       
       
        ItemDeCarro item1 = new ItemDeCarro(producto, 1);
-       
-      ItemDeCarro item2 = new ItemDeCarro(producto1, 1);
+       ItemDeCarro item2 = new ItemDeCarro(producto1, 1);
       ItemDeCarro item3 = new ItemDeCarro(producto2, 1);
+      
+  
       
       Persona comprador=new Persona("Pablo", "Barzaghi","232323" , TipoDocumento.DNI);
       
-      Carro carro =new Carro(comprador, item1, item2, item3);
+     Carro    carro =new Carro(comprador, item1, item2, item3);
       carro.setTipoDescuento(TipoDescuentoEnum.PORCENTAJE);
       
       

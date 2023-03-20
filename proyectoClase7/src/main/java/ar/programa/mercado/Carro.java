@@ -114,7 +114,7 @@ public class Carro {
      */
     public void setTipoDescuento(TipoDescuentoEnum tipoDescuento) {
         this.tipoDescuento = tipoDescuento;
-      //  this.valorDesc=valorDesc;
+    
     }
     
     

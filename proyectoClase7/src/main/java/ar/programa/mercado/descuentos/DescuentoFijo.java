@@ -30,7 +30,7 @@ public class DescuentoFijo extends DescuentoImpl{
       public  double getDescuento(Producto producto){
     
           double  desc=super. getDescuento(producto);
-           System.out.println(" resultado de getDescuento FIJO "+ ( producto.getPrecio()-desc));
+           System.out.println(" resultado de getDescuento "+ ( producto.getPrecio()-desc));
        return producto.getPrecio()-desc;
    
     

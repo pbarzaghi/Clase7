@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: CarroTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.186 s <<< FAILURE! - in CarroTest
-CarroTest.carroConDescuentoFijoenPesos  Time elapsed: 0.017 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <225.0> but was: <75.0>
-	at CarroTest.carroConDescuentoFijoenPesos(CarroTest.java:76)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.171 s - in CarroTest
