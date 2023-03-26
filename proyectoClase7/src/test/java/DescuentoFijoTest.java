@@ -22,11 +22,12 @@ public class DescuentoFijoTest {
       producto.setCodigo("1111");
       producto.setPrecio(100.0);
       
-      double valorDescuento=5.0;
+     
       Descuento fijo=new DescuentoFijo();
-      fijo.setDescuento(producto, valorDescuento);
+      fijo.setValorDescuento(5.0);
+     
       
-      Assertions.assertEquals(95.0,  fijo.getDescuento(producto));
+      Assertions.assertEquals(95.0,  fijo.getDescuentoGral(producto.getPrecio()));
       
 
       

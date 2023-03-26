@@ -23,17 +23,9 @@ public class DescuentoFijo extends DescuentoImpl{
   
     }
     
-      public  double getDescuentoXProducto(Producto producto){
-    
-          //double  desc=super. getDescuento(producto);
-          // System.out.println(" resultado de getDescuento "+ ( producto.getPrecio()-desc));
-          
-       return producto.getPrecio()-getValorDescuento();
-   
     
     }
    
    
   
     
-}

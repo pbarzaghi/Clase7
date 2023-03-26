@@ -32,11 +32,10 @@ public class DescuentoConPorcentajeTopeTest {
                 Descuento porcentaje=new DescuentoConPorcentajeTope();
                 // TOPE DE PORCENTAJE
                 porcentaje.setValorDescuento(10.0);
-                porcentaje.setDescuento(producto, 30.0);
+                
 
 
-
-                Assertions.assertEquals(90.0,  producto.getPrecio()*porcentaje.getDescuento(producto));
+                Assertions.assertEquals(90.0,  porcentaje.getDescuentoGral(producto.getPrecio()));
 
 
 

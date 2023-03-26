@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class DescuentoImpl implements Descuento {
 
 private static  HashMap tablaDesc;
-private static double valorDescuento;
+private double valorDescuento;
  
     
     
@@ -68,6 +68,6 @@ private static double valorDescuento;
 
     @Override
     public double getDescuentoGral(double suma) {
-       return suma -getValorDescuento();
+       return suma - getValorDescuento();
     }
 }

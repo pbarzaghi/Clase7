@@ -39,7 +39,7 @@ public class Producto {
     /**
      * @param precio the precio to set
      */
-    public void setPrecio(double precio) {
+    public void setPrecio(double precio)  {
         this.precio = precio;
     }
 

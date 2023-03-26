@@ -71,16 +71,10 @@ public class Carro {
           sumaItem+=itemCarro.getPrecioXCantidad();
          
       }
-     if(sumaItem==0.0){
-              System.out.println("NO SE PUEDE APLICAR DESCUENTO CON CARRO EN PRECIO EN CERO" );
-            return 0;
-            
-     } else if (sumaItem < 0.0){
-           System.out.println("NO SE PUEDE APLICAR DESCUENTO CON CARRO CON PRECIO NEGATIVO" );
-            return 0;
-      }       
-      return  descuento.getDescuentoGral(sumaItem);
-     
+     if(sumaItem>0.0)      
+       return  descuento.getDescuentoGral(sumaItem);
+     else
+     return sumaItem;
     }
     
     

@@ -27,7 +27,24 @@ public class ItemDeCarro {
     
     }
     
-    /*
+   
+    
+    public double getPrecioXCantidad(){
+       
+        
+        double precio=producto.getPrecio();
+        if(precio == 0){
+            System.err.println("UN PRECIO NO PUEDE SER VALOR O");
+            return 0.0;   
+        }else  if(precio < 0){
+              System.err.println("UN PRECIO NO PUEDE SER NEGATIVO");
+             return -1.0;   
+        }else
+         return  (cantidad * precio );
+    
+    }
+    
+     /*
      Este metodo retorna el valor del producto con su descuento segun su tipo
      enviado por parametro
      Retornando el resultado segun la cantidad por el valor del producto con
@@ -35,16 +52,6 @@ public class ItemDeCarro {
     
      return double
     */
-    
-    public double getPrecioXCantidad(){
-       
-        
-        
-         return  (cantidad * producto.getPrecio() );
-    
-    }
-    
-    
     public double getPrecioItemConDescuento(TipoDescuentoEnum tipo){
         
       Descuento descuento;

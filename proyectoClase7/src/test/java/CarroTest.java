@@ -171,9 +171,9 @@ public class CarroTest {
       descuento.setValorDescuento(10.0);
       carro.setDescuento(descuento);
       
-      System.out.println("CarroTest.carroConDescDel30PorcientoDado() ----- "+carro.getPrecioCompra());
+      System.out.println("CarroTest.carroConDescDel30PorcientoDado() ----- "+carro.getPrecioDelCarro());
      
-      Assertions.assertEquals(270.0,carro.getPrecioCompra());
+      Assertions.assertEquals(270.0,carro.getPrecioDelCarro());
         
     
     }
