@@ -39,6 +39,9 @@ public class ItemDeCarro {
         }else  if(precio < 0){
               System.err.println("UN PRECIO NO PUEDE SER NEGATIVO");
              return -1.0;   
+        }else if(cantidad <=0){
+            System.err.println("NO PUEDE TENER STOCK NEGATIVO");
+            return -2;
         }else
          return  (cantidad * precio );
     
