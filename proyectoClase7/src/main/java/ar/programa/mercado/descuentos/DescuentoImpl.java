@@ -18,11 +18,11 @@ import java.util.HashMap;
 public class DescuentoImpl implements Descuento {
 
   private static  HashMap tablaDesc;
-  private Double valorDesc;
+  private double valorDesc;
     
     
     
-     public void setDescuento(Producto producto,Double valor){
+     public void setDescuento(Producto producto,double valor){
     
         if (tablaDesc == null){
             tablaDesc =new HashMap();
@@ -35,7 +35,7 @@ public class DescuentoImpl implements Descuento {
   
     }
      
-     public void setValorDesc(Double valorDesc){
+     public void setValorDesc(double valorDesc){
         this.valorDesc=valorDesc;
      
      }
@@ -49,7 +49,7 @@ public class DescuentoImpl implements Descuento {
      
     */
 
-    public  Double getDescuento(Producto producto){
+    public  double getDescuento(Producto producto){
     
          if(tablaDesc !=null)     
          if( tablaDesc.containsKey(producto))

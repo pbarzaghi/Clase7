@@ -11,10 +11,10 @@ import ar.programa.mercado.Producto;
 public interface Descuento {
     
     
-public Double getDescuento(Producto producto);
-public void setDescuento(Producto producto,Double porciento);
+public double getDescuento(Producto producto);
+public void setDescuento(Producto producto,double porciento);
 
-public void setValorDesc(Double valorDesc);
+public void setValorDesc(double valorDesc);
 
 
 

@@ -1,5 +1,6 @@
 ar\programa\mercado\descuentos\TipoDescuentoEnum.class
 ar\programa\mercado\Carro.class
+ar\programa\principal\Clase7LeerDeArchivo.class
 ar\programa\mercado\Producto.class
 ar\programa\mercado\ItemDeCarro.class
 ar\programa\mercado\descuentos\Descuento.class

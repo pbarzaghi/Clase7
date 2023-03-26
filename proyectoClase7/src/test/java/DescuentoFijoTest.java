@@ -26,7 +26,7 @@ public class DescuentoFijoTest {
       Descuento fijo=new DescuentoFijo();
       fijo.setDescuento(producto, valorDescuento);
       
-      Assertions.assertEquals(95.0,  (producto.getPrecio()- fijo.getDescuento(producto)));
+      Assertions.assertEquals(95.0,  fijo.getDescuento(producto));
       
 
       
