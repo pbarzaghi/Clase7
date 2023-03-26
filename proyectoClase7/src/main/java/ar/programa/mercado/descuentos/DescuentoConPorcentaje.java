@@ -30,7 +30,10 @@ public class DescuentoConPorcentaje extends DescuentoImpl {
   
     }
    
-      
+      @Override
+    public double getDescuentoGral(double suma) {
+       return suma -(  (suma * getValorDescuento())/100);
+    } 
   
     
 }

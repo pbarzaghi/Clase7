@@ -21,8 +21,8 @@ public class DescuentoConPorcentajeTope extends DescuentoImpl  {
     
        double valorTope=0.0;
         
-        if(valorPorc > topePorcentaje)
-            valorTope= (100-topePorcentaje)/100;
+        if(valorPorc > getTopePorcentaje())
+            valorTope= (100-getTopePorcentaje())/100;
             
         else
               valorTope= (100-valorPorc)/100;
@@ -30,11 +30,25 @@ public class DescuentoConPorcentajeTope extends DescuentoImpl  {
     super.setDescuento(producto, valorTope);
    }
    
-   public void setValorDesc(double valorDesc){
+  
+    @Override
+    public double getDescuentoGral(double suma) {
+       return suma -(  (suma * getValorDescuento())/100);
+    } 
+
+    /**
+     * @return the topePorcentaje
+     */
+    public double getTopePorcentaje() {
+        return topePorcentaje;
+    }
+
+    /**
+     * @param topePorcentaje the topePorcentaje to set
+     */
+    public void setTopePorcentaje(double topePorcentaje) {
+        this.topePorcentaje = topePorcentaje;
+    }
+  
    
-      this.topePorcentaje=valorDesc;
    }
-   
-   
-    
-}

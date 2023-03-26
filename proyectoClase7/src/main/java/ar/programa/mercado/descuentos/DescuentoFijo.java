@@ -12,26 +12,23 @@ import ar.programa.mercado.Producto;
  */
 public class DescuentoFijo extends DescuentoImpl{
 
-  private double montoFijo;
+ // private double montoFijo;
 
-   public void setValorDesc(double valorDesc){
-     
-       this.montoFijo=valorDesc;
-   
-   }
+ 
     
-     public void setDescuento(Producto producto,double montoFijo){
+     public void setDescuentoXProd(Producto producto,double montoFijo){
        
         super.setDescuento(producto,montoFijo);                
                 
   
     }
     
-      public  double getDescuento(Producto producto){
+      public  double getDescuentoXProducto(Producto producto){
     
-          double  desc=super. getDescuento(producto);
-           System.out.println(" resultado de getDescuento "+ ( producto.getPrecio()-desc));
-       return producto.getPrecio()-desc;
+          //double  desc=super. getDescuento(producto);
+          // System.out.println(" resultado de getDescuento "+ ( producto.getPrecio()-desc));
+          
+       return producto.getPrecio()-getValorDescuento();
    
     
     }

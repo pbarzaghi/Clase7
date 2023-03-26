@@ -118,7 +118,7 @@ public class ProyectoClase7 {
        
    */
          Descuento  tablaDesc= new DescuentoConPorcentajeTope();
-         tablaDesc.setValorDesc(10.0);
+         tablaDesc.setValorDescuento(10.0);
                 
         tablaDesc.setDescuento(producto1,5.0);
         tablaDesc.setDescuento(producto4, 30.0);
@@ -150,16 +150,19 @@ public class ProyectoClase7 {
     }
 
     private static void cargarCarro() {
-        carro1=new Carro(comprador1, itemCarro1, itemCarro2, itemCarro3);
-        carro1.setTipoDescuento(TipoDescuentoEnum.TOPE_PORCENTAJE);
-       //carro2 =new Carro(comprador2, itemCarro1,null, itemCarro5);
+        carro1=new Carro(comprador1);
+        carro1.addItemDeCarrito(itemCarro1);
+        carro1.addItemDeCarrito(itemCarro2);
+        carro1.addItemDeCarrito(itemCarro3);
+        carro1.setTipoDescuento(TipoDescuentoEnum.PORCENTAJE);
+      
                 
            
     }
 
     private static void imprimirPreciosCarros() {
       
-      System.out.println("El carro 1 de " + carro1.getComprador().getNombreCompleto() +" Gasto un total : "+carro1.getPrecioCompra());
+      System.out.println("El carro 1 de " + carro1.getComprador().getNombreCompleto() +" Gasto un total : "+carro1.getPrecioDelCarro());
     //  System.out.println("El carro 2 de " + carro2.getComprador().getNombreCompleto() +" Gasto un total : "+carro2.getPrecioCompra());
     
     

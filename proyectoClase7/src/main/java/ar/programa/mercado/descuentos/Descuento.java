@@ -14,7 +14,9 @@ public interface Descuento {
 public double getDescuento(Producto producto);
 public void setDescuento(Producto producto,double porciento);
 
-public void setValorDesc(double valorDesc);
+public void setValorDescuento(double valorDesc);
+public double getValorDescuento();
+public double getDescuentoGral(double suma);
 
 
 

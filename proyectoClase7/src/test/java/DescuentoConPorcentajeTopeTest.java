@@ -31,7 +31,7 @@ public class DescuentoConPorcentajeTopeTest {
                
                 Descuento porcentaje=new DescuentoConPorcentajeTope();
                 // TOPE DE PORCENTAJE
-                porcentaje.setValorDesc(10.0);
+                porcentaje.setValorDescuento(10.0);
                 porcentaje.setDescuento(producto, 30.0);
 
 

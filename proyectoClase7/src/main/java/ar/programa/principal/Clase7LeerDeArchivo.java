@@ -48,7 +48,9 @@ public class Clase7LeerDeArchivo {
       
       generarCostoDelCarro();
       
-       System.out.println("El carro 1 de " + carro.getComprador().getNombreCompleto() +" Gasto un total : "+carro.getPrecioCompra());
+      double valorCarro=carro.getPrecioDelCarro();
+      if(valorCarro != 0)
+        System.out.println("El carro 1 de " + carro.getComprador().getNombreCompleto() +" Gasto un total : "+valorCarro);
         
         
     }
@@ -137,22 +139,26 @@ public class Clase7LeerDeArchivo {
         ItemDeCarro item1=(ItemDeCarro)tablaObjectos.get(ItemDeCarro.class+"1");
         ItemDeCarro item2= (ItemDeCarro)tablaObjectos.get(ItemDeCarro.class+"2"); 
         ItemDeCarro item3= (ItemDeCarro)tablaObjectos.get(ItemDeCarro.class+"3"); 
-        carro = new Carro(comprador,item1,item2,item3);
+        carro = new Carro(comprador);
+        carro.addItemDeCarrito(item1);
+        carro.addItemDeCarrito(item2);
+        carro.addItemDeCarrito(item3);
         Descuento descuento;
         
        String cadena = JOptionPane.showInputDialog("Tipo descuentos : 1 -Porcentaje . 2- Tope Porcentaje . 3- Monto Fijo . 4 Sin Descuento");
-      
+        System.out.println("la cadena que elegi es "+ cadena);
         switch (cadena) {
+           
                 case "1":
-                     carro.setTipoDescuento(TipoDescuentoEnum.TOPE_PORCENTAJE);
-                      descuento=new DescuentoConPorcentajeTope();
+                     carro.setTipoDescuento(TipoDescuentoEnum.PORCENTAJE) ;
+                      descuento=new DescuentoConPorcentaje();
                        break;
                 case "2":    
-                       carro.setTipoDescuento(TipoDescuentoEnum.PORCENTAJE);
-                       descuento=new DescuentoConPorcentaje();
+                       carro.setTipoDescuento(TipoDescuentoEnum.TOPE_PORCENTAJE) ;
+                       descuento=new DescuentoConPorcentajeTope();
                        break;
                 case "3":
-                       carro.setTipoDescuento(TipoDescuentoEnum.FIJO);
+                       carro.setTipoDescuento(TipoDescuentoEnum.FIJO) ;
                         descuento=new DescuentoFijo();
                        break;
                 default:   
@@ -160,10 +166,11 @@ public class Clase7LeerDeArchivo {
                        descuento=new DescuentoImpl();
                        break;
                      
-         }        
+         }    
+        carro.setDescuento(descuento);
            double valorDescuento= Double.parseDouble(JOptionPane.showInputDialog("Ingrese el valor descuento "));
            System.out.println("valor de descuento "+valorDescuento);
-          descuento.setValorDesc(valorDescuento);
+          descuento.setValorDescuento(valorDescuento);
        
     
        

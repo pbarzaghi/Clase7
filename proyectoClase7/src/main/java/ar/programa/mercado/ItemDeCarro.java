@@ -36,6 +36,14 @@ public class ItemDeCarro {
      return double
     */
     
+    public double getPrecioXCantidad(){
+       
+        
+        
+         return  (cantidad * producto.getPrecio() );
+    
+    }
+    
     
     public double getPrecioItemConDescuento(TipoDescuentoEnum tipo){
         
@@ -44,18 +52,20 @@ public class ItemDeCarro {
       
        if(TipoDescuentoEnum.FIJO == tipo){
                descuento=new DescuentoFijo();
-            //   descuento.setValorDesc(valor);
-            //   descuento.setDescuento(producto, valor);
-               resultado=producto.getPrecio()-  descuento.getDescuento(producto);
+               resultado=producto.getPrecio()-  descuento.getValorDescuento();
+             
+               // fue implementado por si cada producto tenia descuento
+              // resultado=producto.getPrecio()-  descuento.getDescuento(producto);
        }
         else if(TipoDescuentoEnum.PORCENTAJE== tipo){ 
                descuento=new DescuentoConPorcentaje();
-            //   descuento.setValorDesc(valor);
-               resultado=producto.getPrecio() * descuento.getDescuento(producto);
+           
+                 resultado=producto.getPrecio()-((producto.getPrecio()* descuento.getValorDescuento()/100));
+               //resultado=producto.getPrecio() * descuento.getDescuento(producto);
         }else if (TipoDescuentoEnum.TOPE_PORCENTAJE == tipo){
             descuento=new DescuentoConPorcentajeTope();
-            //descuento.setValorDesc(valor);
-            resultado=producto.getPrecio() * descuento.getDescuento(producto);
+             resultado=producto.getPrecio()-((producto.getPrecio()* descuento.getValorDescuento()/100));
+            // resultado=producto.getPrecio() * descuento.getDescuento(producto);
         }else
             resultado=producto.getPrecio();
          
